@@ -184,6 +184,8 @@ audio {
 	border-radius: 16px;
 	box-shadow: 0 2px 4px gray;
 	margin-bottom: 4vh;
+	margin-left: 2vw;
+	margin-right: 2vw;
 }
 
 .blockhead {
@@ -249,4 +251,9 @@ audio {
 
 .feedback {
 	display: none;
+}
+
+#a1 {
+	max-width: 70vw;
+	height: auto;
 }
