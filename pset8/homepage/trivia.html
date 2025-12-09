@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Trivia!</title>
+		<link href="styles.css" rel="stylesheet">
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<div class="navb">
+			<a class="navi" href="index.html">Home</a>
+			<a class="navi" href="form.html">About You</a>
+			<a class="navi" href="trivia.html">Trivia</a>
+			<a class="navi" href="privacy.html">Privacy</a>
+		</div>
+		<div class="heading">
+      <h1 class="name">Trivia!</h1>
+		</div>
+		<div class="container">
+				<div class="section">
+						<h2>Part 1: Multiple Choice </h2>
+						<hr>
+						<h3>The flag of the European Union has how many stars on it?</h3>
+						<button id="incorrect">10</button>
+						<button id="correct">12</button>
+						<button id="incorrect">11</button>
+						<button id="incorrect">14</button>
+						<p class="feedback" id="correctText">Correct!</p>
+						<p class="feedback" id="incorrectText">Incorrect</p>
+						<script>
+								let correct = document.querySelector('#correct')
+								let answered = false
+								correct.addEventListener('click', function()
+								{
+										if (!answered) {
+												correct.style.backgroundColor = '#b2f7d5';
+												document.querySelector('#correctText').style.display = 'block';
+												answered = true
+										}
+								});
+								let incorrect = document.querySelectorAll("#incorrect").forEach(item => {
+									item.addEventListener('click', () => {
+										if (!answered) {
+												item.style.backgroundColor = '#f7a49e'
+												document.querySelector('#incorrectText').style.display = 'block'
+												answered = true
+										}
+									})
+								})
+						</script>
+				</div>
+				<div class="section">
+						<h2>Part 2: Free Response</h2>
+						<hr>
+						<form class="trivia">
+								<h3>What year was the Lego Group founded?</h3>
+								<input id="freeResp" type="text" placeholder="Answer" class="user"/>
+								<button id="s">Submit</button>
+								<p class="feedback" id="correct2">Correct!</p>
+								<p class="feedback" id="incorrect2">Incorrect</p>
+						</form>
+						<script>
+								let ans = false
+								let resp = document.querySelector('#freeResp')
+								document.querySelector('form').addEventListener('submit', (e) => {
+										e.preventDefault()
+										if (!ans) {
+												if (resp.value == '1932') {
+														document.querySelector('#correct2').style.display = 'block'
+														freeResp.style.backgroundColor = '#b2f7d5'
+												}
+												else {
+														document.querySelector('#incorrect2').style.display = 'block'
+														freeResp.style.backgroundColor = '#f7a49e'
+												}
+												ans = true
+										}
+								})
+						</script>
+				</div>
+			</div>
+	</body>
+</html>
