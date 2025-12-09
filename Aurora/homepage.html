@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Aurora#4606's Annual Celebration</title>
+        <link href="index.css" rel="stylesheet">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="navb">
+            <a class="navi" href="homepage.html">Home</a>
+            <a class="navi" href="aurora1.html">Aurora1</a>
+            <a class="navi" href="aurora2.html">Aurora2</a>
+            <a class="navi" href="aurora3.html">Aurora3</a>
+        </div>
+
+        <div class="title">
+            <div class="bonjour">
+                <h1 class="hello" id="hi">Hola!</h1>
+                <h1 class="bon" id="bonjour">Ou... Bonjour!</h1>
+                <script>
+                    let sub = document.querySelector(".bon")
+                    let answered = false;
+                    sub.addEventListener('mouseover', (e) => {
+                        e.preventDefault()
+                        if (!answered) {
+                            if (hello()) {
+                                answered = true;
+                            }
+                        }
+                    })
+                </script>
+            </div>
+            <h2 class="name">Happy Birthday!</h2>
+            <h1 class="surprise" id="surp">Joyeux Anniversaire!</h1>
+        </div>
+    </body>
+</html>
