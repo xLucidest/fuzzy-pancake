@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Uvas's Annual Celebration</title>
+        <link href="index.css" rel="stylesheet">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="navb">
+            <a class="navi" href="index.html">Home</a>
+            <a class="navi" href="aurora1.html">Uvas1</a>
+            <a class="navi" href="aurora2.html">Uvas2</a>
+            <a class="navi" href="aurora3.html">Uvas3</a>
+        </div>
+
+        <div class="title">
+            <div class="bonjour">
+                <h1 class="hello" id="hi">Hallo!</h1>
+                <h1 class="bon" id="bonjour">Oh... Hola!</h1>
+                <script>
+                    let sub = document.querySelector(".bon")
+                    let answered = false;
+                    sub.addEventListener('mouseover', (e) => {
+                        e.preventDefault()
+                        if (!answered) {
+                            if (hello()) {
+                                answered = true;
+                            }
+                        }
+                    })
+                </script>
+            </div>
+            <h2 class="name">Happy Birthday!</h2>
+            <h1 class="surprise" id="surp">¡Feliz Cumpleaños!</h1>
+        </div>
+    </body>
+</html>
